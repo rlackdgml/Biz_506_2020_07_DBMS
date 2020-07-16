@@ -105,7 +105,6 @@ WHERE st_dept = '관광학';
 UPDATE tbl_dept
 
 SET d_name = '관광정보학'
-
 WHERE d_code = 'D001';
 
  
