@@ -1,4 +1,5 @@
---
+-- user1위치
+
 
 SELECT st_dept FROM tbl_student
 
@@ -26,11 +27,13 @@ CREATE TABLE tbl_student(
 
  
 
-DROP TABLE tbl_student;
+DROP TABLE tbl_dept;
 
  
 
 SELECT * FROM tbl_student;
+
+DROP TABLE tbl_student;
 
  
 
