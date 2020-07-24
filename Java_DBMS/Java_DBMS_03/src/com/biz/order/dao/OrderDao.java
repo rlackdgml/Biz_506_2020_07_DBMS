@@ -7,5 +7,7 @@ import com.biz.order.model.OrderVO;
 public interface OrderDao {
 	
 	public List<OrderVO> selectAll();
+	
+	
 
 }
