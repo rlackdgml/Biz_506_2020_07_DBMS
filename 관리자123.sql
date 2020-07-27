@@ -1,0 +1,8 @@
+CREATE TABLESPACE grade2TS
+DATAFILE 'C:/bizwork/workspace/oralce_data/grade5TS.dbf'
+SIZE 1M AUTOEXTEND ON NEXT 10K;
+
+CREATE USER grade2 IDENTIFIED BY grade2
+DEFAULT TABLESPACE grade2TS;
+
+GRANT DBA TO grade2;
