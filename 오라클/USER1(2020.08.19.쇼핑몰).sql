@@ -23,8 +23,7 @@ CREATE TABLE tbl_dept(
     D_ADDRESS	nVARCHAR2(255),
     D_MANAGER	nVARCHAR2(50),
     D_MN_TEL	VARCHAR(20)		
-
-
+    
 
 );
 
