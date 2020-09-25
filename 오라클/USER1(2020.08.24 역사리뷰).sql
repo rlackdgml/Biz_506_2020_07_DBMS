@@ -11,6 +11,6 @@ CREATE TABLE tbl_review(
 );
 
 
-DROP TABLE tbl_review;
+
 
 SELECT * FROM tbl_review;
