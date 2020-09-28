@@ -14,7 +14,9 @@ CREATE TABLE tbl_member (
         
         AccountNonExpired	    CHAR(1),	
         AccountNonLocked	    CHAR(1),	
-        CredentialsNonExpired	CHAR(1)		
+        CredentialsNonExpired	CHAR(1),
+        M_EMAIL	VARCHAR2(30)
+
 
 
 );
@@ -29,3 +31,6 @@ CREATE TABLE tbl_authority(
 
 CREATE SEQUENCE seq_authority
 START WITH 1 INCREMENT BY 1;
+
+SELECT * FROM tbl_member;
+
