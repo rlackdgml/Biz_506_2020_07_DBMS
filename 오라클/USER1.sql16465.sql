@@ -8,3 +8,16 @@ commit;
 SELECT * FROM tbl_member;
 SELECT * FROM tbl_authority;
 
+
+CREATE TABLE tbl_readbook (
+        R_SEQ	NUMBER		PRIMARY KEY,
+        R_BOOK_SEQ	NUMBER	NOT NULL	,
+        R_DATE	VARCHAR2(10)		,
+        R_STIME	VARCHAR2(10)		,
+        R_ETIME	VARCHAR2(10)		,
+        R_COMMENT	nVARCHAR2(2000)		
+
+
+
+);
+SELECT * FROM tbl_readbook
