@@ -15,6 +15,8 @@ START WITH 1 INCREMENT BY 1;
 
 SELECT * FROM tbl_review;
 
+
+-- 게시판
 CREATE TABLE tbl_board (
     b_seq	NUMBER		PRIMARY KEY,
     b_date	VARCHAR2(10)	NOT NULL,	
@@ -34,7 +36,7 @@ SELECT * FROM tbl_board;
 
 
 
-
+-- 리스트 1.2.3
 CREATE TABLE tbl_hlist (
         h_seq	        NUMBER		    PRIMARY KEY,
         h_name	        nVARCHAR2(20)	NOT NULL,	
@@ -86,6 +88,7 @@ CREATE TABLE tbl_hlist3 (
 CREATE SEQUENCE SEQ_HLIST3
 START WITH 1 INCREMENT BY 1;
 
+-- 공지사항
 CREATE TABLE tbl_notice(
     n_seq	NUMBER	PRIMARY KEY,
     n_content	NVARCHAR2(2000)	NOT NULL	,
