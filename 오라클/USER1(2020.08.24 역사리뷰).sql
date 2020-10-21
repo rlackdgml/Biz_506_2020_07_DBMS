@@ -102,10 +102,9 @@ START WITH 1 INCREMENT BY 1;
 
 --로그인
 CREATE TABLE tbl_login(
-l_seq number,
-l_id  varchar2(30),
-l_pw  number
-
+l_seq	NUMBER		PRIMARY KEY,
+l_id	NUMBER	    NOT NULL,	
+l_pw	VARCHAR2(30)	NOT NULL	
 );
 
 
@@ -116,17 +115,19 @@ START WITH 1 INCREMENT BY 1;
 
 -- 회원가입
 CREATE TABLE tbl_join(
-j_seq number,
-j_id  varchar2(30),
-j_pw  number,
-j_email varchar2(30)
-
+j_seq	NUMBER		PRIMARY KEY,
+j_id	NUMBER	NOT NULL,
+j_pw	VARCHAR2(30)	NOT NULL,	
+j_email	VARCHAR2(30)		
 
 );
 
 
 CREATE SEQUENCE SEQ_JOIN
 START WITH 1 INCREMENT BY 1;
+
+DROP TABLE tbl_join;
+DROP TABLE tbl_login;
 
 
 
