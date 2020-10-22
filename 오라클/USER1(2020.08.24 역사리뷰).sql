@@ -39,9 +39,9 @@ SELECT * FROM tbl_board;
 -- 리스트 1.2.3
 CREATE TABLE tbl_hlist (
         h_seq	        NUMBER		    PRIMARY KEY,
-        h_name	        nVARCHAR2(20)	NOT NULL,	
+        h_name	        nVARCHAR2(40)	NOT NULL,	
         h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        nVARCHAR2(30)	NOT NULL,	
+        h_ge	        nVARCHAR2(2000)	NOT NULL,	
         h_quiry	        nVARCHAR2(500),		
         h_offday	    nVARCHAR2(500),	
         h_guide 	    nVARCHAR2(500),
@@ -56,10 +56,10 @@ CREATE SEQUENCE SEQ_HLIST
 START WITH 1 INCREMENT BY 1;
 
 CREATE TABLE tbl_hlist2 (
-        h_seq	        NUMBER		    PRIMARY KEY,
-        h_name	        nVARCHAR2(20)	NOT NULL,	
+       h_seq	        NUMBER		    PRIMARY KEY,
+        h_name	        nVARCHAR2(40)	NOT NULL,	
         h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        nVARCHAR2(30)	NOT NULL,	
+        h_ge	        nVARCHAR2(2000)	NOT NULL,	
         h_quiry	        nVARCHAR2(500),		
         h_offday	    nVARCHAR2(500),	
         h_guide 	    nVARCHAR2(500),
@@ -73,9 +73,9 @@ CREATE SEQUENCE SEQ_HLIST2
 START WITH 1 INCREMENT BY 1;
 CREATE TABLE tbl_hlist3 (
         h_seq	        NUMBER		    PRIMARY KEY,
-        h_name	        nVARCHAR2(20)	NOT NULL,	
+        h_name	        nVARCHAR2(40)	NOT NULL,	
         h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        nVARCHAR2(30)	NOT NULL,	
+        h_ge	        nVARCHAR2(2000)	NOT NULL,	
         h_quiry	        nVARCHAR2(500),		
         h_offday	    nVARCHAR2(500),	
         h_guide 	    nVARCHAR2(500),
@@ -86,6 +86,40 @@ CREATE TABLE tbl_hlist3 (
         
 );
 CREATE SEQUENCE SEQ_HLIST3
+START WITH 1 INCREMENT BY 1;
+--리스트4
+CREATE TABLE tbl_hlist4 (
+        h_seq	        NUMBER		    PRIMARY KEY,
+        h_name	        nVARCHAR2(40)	NOT NULL,	
+        h_address	    nVARCHAR2(125)	NOT NULL,
+        h_ge	        nVARCHAR2(2000)	NOT NULL,	
+        h_quiry	        nVARCHAR2(500),		
+        h_offday	    nVARCHAR2(500),	
+        h_guide 	    nVARCHAR2(500),
+        h_onuse	        nVARCHAR2(15),		
+        h_usage     	nVARCHAR2(300),		
+        h_car	        nVARCHAR2(300),		
+        h_infor	        nVARCHAR2(2000)
+        
+);
+CREATE SEQUENCE SEQ_HLIST4
+START WITH 1 INCREMENT BY 1;
+--리스트5
+CREATE TABLE tbl_hlist5 (
+        h_seq	        NUMBER		    PRIMARY KEY,
+        h_name	        nVARCHAR2(40)	NOT NULL,	
+        h_address	    nVARCHAR2(125)	NOT NULL,
+        h_ge	        nVARCHAR2(2000)	NOT NULL,	
+        h_quiry	        nVARCHAR2(500),		
+        h_offday	    nVARCHAR2(500),	
+        h_guide 	    nVARCHAR2(500),
+        h_onuse	        nVARCHAR2(15),		
+        h_usage     	nVARCHAR2(300),		
+        h_car	        nVARCHAR2(300),		
+        h_infor	        nVARCHAR2(2000)
+        
+);
+CREATE SEQUENCE SEQ_HLIST5
 START WITH 1 INCREMENT BY 1;
 
 -- 공지사항
