@@ -38,18 +38,17 @@ SELECT * FROM tbl_board;
 
 -- 리스트 1.2.3
 CREATE TABLE tbl_hlist (
-        h_seq	        NUMBER		    PRIMARY KEY,
+         h_seq	        NUMBER		    PRIMARY KEY,
         h_name	        nVARCHAR2(40)	NOT NULL,	
         h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        nVARCHAR2(2000)	NOT NULL,	
+        h_ge	       LONG	,
         h_quiry	        nVARCHAR2(500),		
         h_offday	    nVARCHAR2(500),	
         h_guide 	    nVARCHAR2(500),
         h_onuse	        nVARCHAR2(15),		
-        h_usage     	nVARCHAR2(300),		
-        h_car	        nVARCHAR2(300),		
-        h_infor	        nVARCHAR2(2000)
-        
+        h_usage     	nVARCHAR2(500),		
+        h_car	        nVARCHAR2(500),		
+        h_infor	       NCLOB
 );
 DROP TABLE tbl_hlist;
 CREATE SEQUENCE SEQ_HLIST
@@ -59,30 +58,30 @@ CREATE TABLE tbl_hlist2 (
        h_seq	        NUMBER		    PRIMARY KEY,
         h_name	        nVARCHAR2(40)	NOT NULL,	
         h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        nVARCHAR2(2000)	NOT NULL,	
+        h_ge	        NCLOB	,	
         h_quiry	        nVARCHAR2(500),		
         h_offday	    nVARCHAR2(500),	
         h_guide 	    nVARCHAR2(500),
         h_onuse	        nVARCHAR2(15),		
-        h_usage     	nVARCHAR2(300),		
-        h_car	        nVARCHAR2(300),		
-        h_infor	        nVARCHAR2(2000)
+        h_usage     	nVARCHAR2(500),		
+        h_car	        nVARCHAR2(500),		
+        h_infor	        NCLOB
         
 );
 CREATE SEQUENCE SEQ_HLIST2
 START WITH 1 INCREMENT BY 1;
 CREATE TABLE tbl_hlist3 (
-        h_seq	        NUMBER		    PRIMARY KEY,
+         h_seq	        NUMBER		    PRIMARY KEY,
         h_name	        nVARCHAR2(40)	NOT NULL,	
         h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        nVARCHAR2(2000)	NOT NULL,	
+        h_ge	       NCLOB	,	
         h_quiry	        nVARCHAR2(500),		
         h_offday	    nVARCHAR2(500),	
         h_guide 	    nVARCHAR2(500),
         h_onuse	        nVARCHAR2(15),		
-        h_usage     	nVARCHAR2(300),		
-        h_car	        nVARCHAR2(300),		
-        h_infor	        nVARCHAR2(2000)
+        h_usage     	nVARCHAR2(500),		
+        h_car	        nVARCHAR2(500),		
+        h_infor	       NCLOB
         
 );
 CREATE SEQUENCE SEQ_HLIST3
@@ -92,14 +91,14 @@ CREATE TABLE tbl_hlist4 (
         h_seq	        NUMBER		    PRIMARY KEY,
         h_name	        nVARCHAR2(40)	NOT NULL,	
         h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        nVARCHAR2(2000)	NOT NULL,	
+        h_ge	       NCLOB,	
         h_quiry	        nVARCHAR2(500),		
         h_offday	    nVARCHAR2(500),	
         h_guide 	    nVARCHAR2(500),
         h_onuse	        nVARCHAR2(15),		
         h_usage     	nVARCHAR2(300),		
         h_car	        nVARCHAR2(300),		
-        h_infor	        nVARCHAR2(2000)
+        h_infor	       NCLOB
         
 );
 CREATE SEQUENCE SEQ_HLIST4
@@ -109,14 +108,14 @@ CREATE TABLE tbl_hlist5 (
         h_seq	        NUMBER		    PRIMARY KEY,
         h_name	        nVARCHAR2(40)	NOT NULL,	
         h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        nVARCHAR2(2000)	NOT NULL,	
+        h_ge	        NCLOB,	
         h_quiry	        nVARCHAR2(500),		
         h_offday	    nVARCHAR2(500),	
         h_guide 	    nVARCHAR2(500),
         h_onuse	        nVARCHAR2(15),		
         h_usage     	nVARCHAR2(300),		
         h_car	        nVARCHAR2(300),		
-        h_infor	        nVARCHAR2(2000)
+        h_infor	        NCLOB
         
 );
 CREATE SEQUENCE SEQ_HLIST5
