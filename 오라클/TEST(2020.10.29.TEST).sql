@@ -45,3 +45,5 @@ UPDATE tbl_test SET t_tel ='010-333-3333' WHERE t_num ='S0003';
 -- 필요없는 데이터는 삭제 수행한다.
 SELECT * FROM tbl_test WHERE t_name = '장영실';
 DELETE FROM tbl_test WHERE t_num ='S0005';
+
+commit;
