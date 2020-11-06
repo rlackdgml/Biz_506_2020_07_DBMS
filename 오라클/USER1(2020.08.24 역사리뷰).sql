@@ -16,111 +16,6 @@ START WITH 1 INCREMENT BY 1;
 SELECT * FROM tbl_review;
 
 
--- 게시판
-CREATE TABLE tbl_board (
-    b_seq	NUMBER		PRIMARY KEY,
-    b_date	VARCHAR2(10)	NOT NULL,	
-    b_time	VARCHAR2(10)	NOT NULL,	
-    b_writer	NVARCHAR2(30)	NOT NULL,
-    b_subject	NVARCHAR2(125)	NOT NULL,	
-    b_content	NVARCHAR2(2000)	NOT NULL,	
-    b_count	NUMBER,		
-    b_file	NVARCHAR2(125)		
-
-);
-CREATE SEQUENCE SEQ_BOARD
-START WITH 1 INCREMENT BY 1;
-
-SELECT * FROM tbl_board;
-
-
-
-
--- 리스트 1.2.3
-CREATE TABLE tbl_hlist (
-         h_seq	        NUMBER		    PRIMARY KEY,
-        h_name	        nVARCHAR2(40)	NOT NULL,	
-        h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	       LONG	,
-        h_quiry	        nVARCHAR2(500),		
-        h_offday	    nVARCHAR2(500),	
-        h_guide 	    nVARCHAR2(500),
-        h_onuse	        nVARCHAR2(15),		
-        h_usage     	nVARCHAR2(500),		
-        h_car	        nVARCHAR2(500),		
-        h_infor	       NCLOB
-);
-DROP TABLE tbl_hlist;
-CREATE SEQUENCE SEQ_HLIST
-START WITH 1 INCREMENT BY 1;
-
-CREATE TABLE tbl_hlist2 (
-       h_seq	        NUMBER		    PRIMARY KEY,
-        h_name	        nVARCHAR2(40)	NOT NULL,	
-        h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        NCLOB	,	
-        h_quiry	        nVARCHAR2(500),		
-        h_offday	    nVARCHAR2(500),	
-        h_guide 	    nVARCHAR2(500),
-        h_onuse	        nVARCHAR2(15),		
-        h_usage     	nVARCHAR2(500),		
-        h_car	        nVARCHAR2(500),		
-        h_infor	        NCLOB
-        
-);
-CREATE SEQUENCE SEQ_HLIST2
-START WITH 1 INCREMENT BY 1;
-CREATE TABLE tbl_hlist3 (
-         h_seq	        NUMBER		    PRIMARY KEY,
-        h_name	        nVARCHAR2(40)	NOT NULL,	
-        h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	       NCLOB	,	
-        h_quiry	        nVARCHAR2(500),		
-        h_offday	    nVARCHAR2(500),	
-        h_guide 	    nVARCHAR2(500),
-        h_onuse	        nVARCHAR2(15),		
-        h_usage     	nVARCHAR2(500),		
-        h_car	        nVARCHAR2(500),		
-        h_infor	       NCLOB
-        
-);
-CREATE SEQUENCE SEQ_HLIST3
-START WITH 1 INCREMENT BY 1;
---리스트4
-CREATE TABLE tbl_hlist4 (
-        h_seq	        NUMBER		    PRIMARY KEY,
-        h_name	        nVARCHAR2(40)	NOT NULL,	
-        h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	       NCLOB,	
-        h_quiry	        nVARCHAR2(500),		
-        h_offday	    nVARCHAR2(500),	
-        h_guide 	    nVARCHAR2(500),
-        h_onuse	        nVARCHAR2(15),		
-        h_usage     	nVARCHAR2(300),		
-        h_car	        nVARCHAR2(300),		
-        h_infor	       NCLOB
-        
-);
-CREATE SEQUENCE SEQ_HLIST4
-START WITH 1 INCREMENT BY 1;
---리스트5
-CREATE TABLE tbl_hlist5 (
-        h_seq	        NUMBER		    PRIMARY KEY,
-        h_name	        nVARCHAR2(40)	NOT NULL,	
-        h_address	    nVARCHAR2(125)	NOT NULL,
-        h_ge	        NCLOB,	
-        h_quiry	        nVARCHAR2(500),		
-        h_offday	    nVARCHAR2(500),	
-        h_guide 	    nVARCHAR2(500),
-        h_onuse	        nVARCHAR2(15),		
-        h_usage     	nVARCHAR2(300),		
-        h_car	        nVARCHAR2(300),		
-        h_infor	        NCLOB
-        
-);
-CREATE SEQUENCE SEQ_HLIST5
-START WITH 1 INCREMENT BY 1;
-
 -- 공지사항
 CREATE TABLE tbl_notice(
     n_seq	NUMBER	PRIMARY KEY,
@@ -150,17 +45,96 @@ START WITH 1 INCREMENT BY 1;
 CREATE TABLE tbl_join(
 j_seq	NUMBER		PRIMARY KEY,
 j_id	NUMBER	NOT NULL,
-j_pw	VARCHAR2(30)	NOT NULL,	
-j_email	VARCHAR2(30)		
-
+j_pw	VARCHAR2(30)	NOT NULL	
 );
 
-
+Drop TABLE tbl_join;
 CREATE SEQUENCE SEQ_JOIN
 START WITH 1 INCREMENT BY 1;
 
+-- 마이페이지
+CREATE TABLE tbl_my (
+
+    m_seq NUMBER,
+    m_id NVARCHAR2(30), 
+    m_pw VARCHAR2(30),
+    m_pwc VARCHAR2(30) 
+    
+);
+
+CREATE SEQUENCE SEQ_MY
+START WITH 1 INCREMENT BY 1;
+
+SELECT *FROM tbl_my;
+commit;
+
+
+--리스트
+CREATE TABLE tbl_hlist (
+h_seq	NUMBER	PRIMARY KEY,
+h_category	CHAR(1)	NOT NULL,
+h_title	nVARCHAR2(50)	NOT NULL,
+h_address	NVARCHAR2(255)	NOT NULL,
+h_content	NVARCHAR2(2000)	NOT NULL,
+h_tel	NVARCHAR2(500)	NOT NULL,
+h_file	NVARCHAR2(501)	
+);
+
+
+CREATE SEQUENCE seq_hlist
+START WITH 31 INCREMENT BY 1;
+
+DROP TABLE tbl_hlist;
+DROP SEQUENCE seq_hlist;
+
+SELECT * FROM tbl_hlist WHERE h_category = 1 order by h_seq;
+
+DELETE tbl_hlist WHERE h_category = 2;
+
+
+--게시판
+CREATE TABLE tbl_board (
+b_seq	NUMBER		PRIMARY KEY,
+b_date	VARCHAR2(10)	NOT NULL,	
+b_time	VARCHAR2(10)	NOT NULL,	
+b_writer	NVARCHAR2(30)	NOT NULL,	
+b_subject	NVARCHAR2(125)	NOT NULL,	
+b_content	NVARCHAR2(2000)		,
+b_count	NUMBER		
+
+);
+
+CREATE SEQUENCE seq_board
+START WITH 1 INCREMENT BY 1;
+
+DROP TABLE tbl_board;
+DROP SEQUENCE seq_board;
+
+
+-- 로그인
+CREATE TABLE tbl_login (
+username	VARCHAR2(30)		PRIMARY KEY,
+PASSWORD	nVARCHAR2(255)	NOT NULL	,
+M_NAME	nVARCHAR2(30)		,
+M_TEL	VARCHAR2(30)		,
+M_EMAIL	VARCHAR2(30)		,
+Enabled	CHAR(1)	DEFAULT '0'	,
+AccountNonExpired	CHAR(1)		,
+AccountNonLocked	CHAR(1)		,
+CredentialsNonExpired	CHAR(1)		
+);
+
+select * from tbl_login;
+
+
+
+
+
+
+
 DROP TABLE tbl_join;
 DROP TABLE tbl_login;
+commit;
 
 
 
