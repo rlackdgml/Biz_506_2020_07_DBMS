@@ -22,3 +22,20 @@ SELECT * FROM tbl_ems;
 
 commit;
 
+CREATE TABLE tbl_notice(
+
+        id    number primary key,
+        date_time varchar2(125),
+        writer nvarchar2(20),
+        subject nvarchar2(125),
+        text nvarchar2(2000)
+
+
+);
+
+
+CREATE SEQUENCE seq_notice
+START WITH 1 INCREMENT BY 1;
+
+
+
